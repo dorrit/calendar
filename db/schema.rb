@@ -11,11 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130314163714) do
+ActiveRecord::Schema.define(:version => 20130314193844) do
 
-  create_table "calendars", :force => true do |t|
+  create_table "engagements", :force => true do |t|
     t.datetime "date_time"
-    t.string   "event"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "to_dos", :force => true do |t|
+    t.string   "task"
+    t.boolean  "done"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
