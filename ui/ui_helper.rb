@@ -1,4 +1,6 @@
 require 'active_record'
+require 'active_resource'
+require 'active_support'
 require './ui/to_do_ui'
 require './ui/calendar_ui'
 require './ui/sticky_ui'
