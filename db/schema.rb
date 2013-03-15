@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315001356) do
+ActiveRecord::Schema.define(:version => 20130315185326) do
 
   create_table "engagements", :force => true do |t|
     t.datetime "date_time"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20130315001356) do
   end
 
   create_table "stickies", :force => true do |t|
-    t.string   "note"
+    t.string   "name"
     t.integer  "stickable_id"
     t.string   "stickable_type"
     t.datetime "created_at",     :null => false
