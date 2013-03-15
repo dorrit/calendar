@@ -4,6 +4,7 @@ require 'shoulda-matchers'
 
 require 'engagement'
 require 'to_do'
+require 'sticky'
 
 ActiveRecord::Base.establish_connection(YAML::load(File.open('./db/config.yml'))["test"])
 

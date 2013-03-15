@@ -43,7 +43,7 @@ def engagement_list
 end
 
 def engagement_delete
-  engagements = list
+  engagements = engagement_list
   puts "Which event number would you like to delete?"
   engagement = engagements[gets.chomp.to_i-1]
   if engagement.destroy
@@ -54,7 +54,7 @@ def engagement_delete
 end
 
 def engagement_edit
-  engagements = list
+  engagements = engagement_list
   puts "Which event would you like to edit?"  
   engagement = engagements[gets.chomp.to_i-1]
   puts "Enter a new date or enter to skip. (Example: 2012-12-30 3:30pm)"

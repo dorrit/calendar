@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe ToDo do 
+describe Sticky do 
   context 'associations' do 
-    it {should have_many(:stickies)}
+    it {should belong_to(:stickable)}
   end
 end
