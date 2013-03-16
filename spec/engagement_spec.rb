@@ -11,6 +11,7 @@ describe Engagement do
 
   context 'associations' do 
     it {should have_many(:stickies)}
+    it {should have_many(:tags).through(:taggable_tags)}
   end
 end
 

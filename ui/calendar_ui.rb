@@ -15,6 +15,10 @@ def engagement_add
   end
 end
 
+def engagement_mark
+  puts "Coming soon!"
+end
+
 def engagement_list
   engagements = Engagement.all 
   puts "\nHere are ALL the events:"

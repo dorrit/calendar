@@ -1,11 +1,11 @@
 require './ui/common_ui'
-
+require './ui/tag_ui'
 
 def to_do_add
   puts "\nEnter the task you want to add to your To Do List:"
   name = gets.chomp
   todo = ToDo.create(:name => name, :done => false)
-  "'#{todo.name.capitalize}'has been added to your To Do list."
+  "'#{todo.name.capitalize}' has been added to your To Do list."
 end
 
 def to_do_list
@@ -16,6 +16,17 @@ def to_do_list
     todo.stickies.each {|sticky| puts  "\tNOTE: #{sticky.try(:name)}"}
   end
   todos
+end
+
+def to_do_mark
+  todos = to_do_list
+  puts "\nWhich item do you want to mark?"
+  todo = todos[gets.chomp.to_i-1]
+  tags = tag_list
+  puts "\nWhich tag do you want to use?"
+  tag = tags[gets.chomp.to_i-1]
+  TaggableTag.create!(:taggable => todo, :tag => tag)
+  puts "GREAT! #{tag.name} has been added to #{todo.name}"
 end
 
 def to_do_edit

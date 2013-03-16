@@ -2,7 +2,8 @@ require 'spec_helper'
 
 describe ToDo do 
   context 'associations' do 
-    it {should have_many(:stickies)}
+    it {should have_many(:stickies)}    
+    it {should have_many(:tags).through(:taggable_tags)}
   end
 
   context 'validations' do 
